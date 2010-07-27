@@ -1,0 +1,47 @@
+import(grDevices)
+import(graphics)
+import(stats)
+import(utils)
+import(MASS)
+importFrom(rgl, open3d, points3d, plot3d, quads3d)
+importFrom(misc3d, contour3d)
+export(angle2cart,
+	cart2angle,
+	new2old_par,
+	old2new_par,
+	dprime,
+	dprimef,
+	gaborPatch,
+	glc,
+	glcStruct,
+	gqc,
+	gqcStruct,
+	grg,
+	grtMeans,
+	grtrnorm,
+	ldb,
+	ldb.p.correct,
+	mcovs,
+	qdb,
+	qdb.p.correct,
+	scale,
+	unscale)
+S3method(coef, glc)
+S3method(coef, glcStruct)
+S3method(extractAIC, glc)
+S3method(extractAIC, gqc)
+S3method(mcovs, formula)
+S3method(lines, gqcStruct)
+S3method(logLik, glc)
+S3method(logLik, glcStruct)
+S3method(logLik, gqc)
+S3method(logLik, gqcStruct)
+S3method(plot, glc)
+S3method(plot, gqc)
+S3method(plot3d, glc)
+S3method(plot3d, gqc)
+S3method(predict, glc)
+S3method(print, gqc)
+S3method(print, gqc)
+S3method(scale, glc)
+S3mothod(scale, glc)
