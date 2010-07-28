@@ -20,11 +20,21 @@
 The generic function \code{scale} is redefined to accept arguments other than \code{x}, \code{center}, and \code{scale}. 
 }
 \examples{
-\dontrun{
+
 data(subjdemo_2d)
+fit.2dl <- glc(response ~ x + y, data=subjdemo_2d, 
+    category=subjdemo_2d$category, zlimit=7)
+scale(fit.2dl)
+
+fit.2dq <- gqc(response ~ x + y, data=subjdemo_2d, 
+    category=subjdemo_2d$category, zlimit=7)
+scale(fit.2dq)
+
+
+\dontrun{
+#plots using the discriminant scores
 require(Hmisc)
 options(digits=3)
-
 fit.2dl <- glc(response ~ x + y, data=subjdemo_2d, 
     category=subjdemo_2d$category, zlimit=7)
 # z-scores based on the initial decision bound

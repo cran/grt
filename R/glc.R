@@ -260,21 +260,3 @@ extractAIC.glc <- function(fit, scale, k = 2, ...)
     c(edf, -2 * loglik + k * edf)
 }
 
-scale <- function(x, ...) UseMethod("scale")
-scale.glc  <- function(x, initdb = FALSE, zlimit = Inf, ...)
-{
-    if (!inherits(x, "glc")) stop("object not of class \"glc\"")
-    data <- x$model
-    Terms <- x$terms
-    X <- model.matrix(delete.response(Terms), data)
-    xint <- match("(Intercept)", colnames(X), nomatch=0L)
-    if(xint > 0) X <- X[, -xint, drop=FALSE]
-    if(initdb) params <- x$initpar
-    else params <- x$par
-    #calculate z-scores
-    z_coefs <- c(params$coeffs, params$bias) / params$noise
-    z <- drop( cbind(X,1) %*% as.matrix(z_coefs) )
-    z[z >  zlimit] <- zlimit
-    z[z < -zlimit] <- -zlimit
-    z
-}
