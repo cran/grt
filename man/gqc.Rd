@@ -26,13 +26,13 @@ response specifies the grouping factor (generally a participant's response) and 
 A data frame from which variables specified in \code{formula} are taken.
 }
 \item{category}{
-(Optional.) A factor specifying the true category menbership of the stimuli.
+(Optional.) A factor specifying the true category membership of the stimuli.
 }
 \item{par}{
 object of class \code{gqcStruct} or named list containing a set of initial parameters used to fit the data.
 }
 \item{zlimit}{
-numeric. The z-scores (or discriminant scores) beyound the speficied value will be truncated. Default to \code{Inf}
+numeric. The z-scores (or discriminant scores) beyond the specified value will be truncated. Default to \code{Inf}
 }
 \item{fixed}{
 A named list of logical vectors specifying whether each of \code{pnoise}, \code{cnoise}, \code{coeffs}, and \code{bias} parameters should be fixed to the initial value. Default to all \code{FALSE}. A fatal error will result if set to all \code{TRUE}.
@@ -49,7 +49,7 @@ A list of control parameters passed to the optimizer. See \sQuote{Details} of \c
 }
 }
 \details{
-If \code{par} is not fully specified in the argument, the function attemps to calculate the initial parameter values by internally calling the functions \code{mcovs} and \code{qdb}. The response specified in the \code{formula} is used as the grouping factor in \code{mcovs}.
+If \code{par} is not fully specified in the argument, the function attempts to calculate the initial parameter values by internally calling the functions \code{mcovs} and \code{qdb}. The response specified in the \code{formula} is used as the grouping factor in \code{mcovs}.
 }
 \value{
 object of class \code{gqc}, i.e., a list containing the following components:

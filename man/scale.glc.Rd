@@ -4,7 +4,7 @@
 \alias{scale.glc}
 \alias{scale.gqc}
 \title{Scale method for the class 'glc' and 'gqc'}
-\description{Return the discriminant scores obtained by applying the general linear clasifier to the fitted data.
+\description{Return the discriminant scores obtained by applying the general linear classifier to the fitted data.
 }
 \usage{
 \method{scale}{glc}(x, initdb = FALSE, zlimit = Inf, \dots)
@@ -12,8 +12,8 @@
 }
 \arguments{
 \item{x}{object of class \code{glc} or \code{gqc}}
-\item{initdb}{optional logical. If \code{TRUE}, the returned vector represents the z-scores with repect to the initial parameters, rather than the fitted parameters. Defaults to \code{FALSE}.}
-\item{zlimit}{optional numeric. Used to truncate the the scores beyound the speficied value. Default to \code{Inf}}
+\item{initdb}{optional logical. If \code{TRUE}, the returned vector represents the z-scores with respect to the initial parameters, rather than the fitted parameters. Defaults to \code{FALSE}.}
+\item{zlimit}{optional numeric. Used to truncate the scores beyond the speficied value. Default to \code{Inf}}
  \item{\dots}{further arguments (currently unused)}
 }
 \note{
@@ -43,7 +43,7 @@ zinit <- split(scale(fit.2dl, initdb=TRUE), subjdemo_2d$category)
 histbackback(zinit)
 
 # z-scores based on the fitted decision bound
-# split by the pariticipants response
+# split by the participants' response
 zfit1 <- split(scale(fit.2dl, initdb=FALSE), subjdemo_2d$category)
 histbackback(zfit1)
 

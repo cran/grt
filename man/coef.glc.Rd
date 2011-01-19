@@ -16,12 +16,12 @@ Extracts the coefficients from the model object \code{glc} or \code{glcStruct}.
 \item{\dots}{further arguments}
 }
 \details{
-Both the object \code{glc} and \code{glcStruct} contains the parameters for the decision boundry in the form: 
+Both the object \code{glc} and \code{glcStruct} contain the parameters for the decision boundary in the form: 
 \deqn{
    a_1x_1 + a_2x_2 \ldots a_nx_n + b = 0
 }{a1x1 + a2x2 \dots anxn + b = 0}
 
-This function transforms and return the coefficients of the function solved with respect the \eqn{x_n}{xn}.
+This function transforms and returns the coefficients of the function solved with respect the \eqn{x_n}{xn}.
 }
 \examples{
 data(subjdemo_2d)

@@ -2,7 +2,7 @@
 \name{logLik.gqcStruct}
 \alias{logLik.gqcStruct}
 \title{Log-Likelihood of a 'gqcStruct' Object}
-\description{Calculate the log-liklihood of the general quadratic classifier model applied to a data set.}
+\description{Calculate the log-likelihood of the general quadratic classifier model applied to a data set.}
 \usage{
 \method{logLik}{gqcStruct}(object, response, x, zlimit = Inf, \dots)
 }
@@ -11,7 +11,7 @@
 \arguments{
  \item{object}{object of class \code{gqcStruct}}
  \item{response}{a vector of classification responses used to calculate the log-likelihood of the gqc model.}
- \item{x}{a matrix or dataframe containg values for each stimulus dimensions.} 
+ \item{x}{a matrix or dataframe containing values for each stimulus dimensions.} 
  \item{zlimit}{integer. Used to truncate the z-scores whose absolute values are greater than \code{zlimit} when calculating the log-likelihood. Default to Inf}
   \item{\dots}{further arguments (currently unused)}
 }

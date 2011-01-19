@@ -25,6 +25,7 @@ Author of R adaptation: Kazunaga Matsuki
   Alfonso-Reese, L. A. (2006)
   \emph{General recognition theory of categorization: A MATLAB toolbox}.
   Behavior Research Methods, 38, 579-583.
+
 }
 \examples{
 data(subjdemo_2d)

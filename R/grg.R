@@ -16,5 +16,13 @@ grg <- function(response, fixed = FALSE, k = 2)
     }
     class(fit$logLik) <- "logLik"
     fit$AIC <- AIC(fit$logLik, k = k)
+    class(fit) <- "grg"
     fit
+}
+
+extractAIC.grg <- function(fit, scale, k = 2, ...)
+{
+    loglik <- fit$logLik
+    edf <- attr(loglik, "df")
+    c(edf, -2 * loglik + k * edf)
 }

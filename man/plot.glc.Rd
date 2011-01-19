@@ -17,7 +17,7 @@
 \item{\dots}{further arguments.}
 }
 \details{
-This function produces a scatter plot of data matrix in the \code{x} and (optionally) descision boundary specified within (i.e., \code{x$par} and/or \code{x$initpar}). 
+This function produces a scatter plot of data matrix in the \code{x} and (optionally) decision boundary specified within (i.e., \code{x$par} and/or \code{x$initpar}). 
 
 The look of the plot differs depending on the dimension of the model. If the dimension is 1, the model matrix is plotted on the y-axis, and category vector (as in \code{x$category}) is plotted on the x axis. If the dimension is 2, scatter plot of the model matrix is plotted. If the dimension is 3, \code{plot3d.glc} is called to create a 3D scatter plot. If the dimension is greater than 3, an error message will be returned.
 }
@@ -27,7 +27,7 @@ fit.2dl <- glc(response ~ x + y, data=subjdemo_2d,
     category=subjdemo_2d$category, zlimit=7)
 plot(fit.2dl)
 
-#if one want to plot decision bounds in
+#if one wants to plot decision bounds in
 # colors different from the defaults
 plot(fit.2dl, fitdb=FALSE)
 abline(coef=coef(fit.2dl$par), col="orange")

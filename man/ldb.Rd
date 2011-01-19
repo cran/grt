@@ -11,8 +11,8 @@ ldb(means, covs,
 }
 \arguments{
 \item{means}{a list of vectors containing means of two distributions.}
-\item{covs}{a matrix or a list of matrix contraining the covariance matrix common to the two distributions.}
-\item{covstruct}{character. If \code{"unstructured"}, the supplied \code{covs} is used as-is. If \code{"scaledIdentity"}, a diagonal covariance matrix with one common variance is used; when the supplied \code{covs} has different values on its diagnal, the mean of the diagnal is used. If \code{"diagonal"}, a diagonal covariance matrix with varying diagonal is used. If \code{"identity"}, an identity matrix is used. Default to \code{"unstructured"}}
+\item{covs}{a matrix or a list of matrix containing the covariance matrix common to the two distributions.}
+\item{covstruct}{character. If \code{"unstructured"}, the supplied \code{covs} is used as-is. If \code{"scaledIdentity"}, a diagonal covariance matrix with one common variance is used; when the supplied \code{covs} has different values on its diagonal, the mean of the diagonal is used. If \code{"diagonal"}, a diagonal covariance matrix with varying diagonal is used. If \code{"identity"}, an identity matrix is used. Default to \code{"unstructured"}}
 \item{noise}{numeric value. See Details. Default to 10.}
 }
 \details{

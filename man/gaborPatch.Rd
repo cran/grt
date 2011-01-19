@@ -24,11 +24,11 @@ gaborPatch(sf,
   \item{theta}{orientation in degree. See \sQuote{Details}}
   \item{rad}{orientation in radian}
   \item{pc}{a fraction (0 to 1) specifying the peak contrast of the Gabor}
-  \item{sigma}{the standard diviation of the Gaussian mask. Either a single numeric or a numeric vector of length 2.}
+  \item{sigma}{the standard deviation of the Gaussian mask. Either a single numeric or a numeric vector of length 2.}
   \item{psi}{phase offset in radian}
   \item{grating}{type of grating to be used. Default to \sQuote{cosine}.}
   \item{npoints}{number of points per line used to draw the patch.}
-  \item{trim}{gaussian values smaller than the specified value should be trimmed.}
+  \item{trim}{Gaussian values smaller than the specified value should be trimmed.}
   \item{trim.col}{gray level of the trimmed part of the image, between 0 (\sQuote{black}) and 1 (\sQuote{white}). Default to .5 (\sQuote{gray})}
   \item{\dots}{additional parameters for \code{\link{image}} may be passed as arguments to this function.}
 }

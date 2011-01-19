@@ -2,7 +2,7 @@
 \name{logLik.glc}
 \alias{logLik.glc}
 \title{Log-Likelihood of a 'glc' Object}
-\description{Extract the log-liklihood of the fitted general linear classifier model.}
+\description{Extract the log-likelihood of the fitted general linear classifier model.}
 \usage{
 \method{logLik}{glc}(object, \dots)
 }
@@ -11,7 +11,7 @@
  \item{\dots}{further arguments (currently unused)}
 }
 \value{
-  The log-likelihood for the general linear classifier represented by the estimated paramers in \code{object}
+  The log-likelihood for the general linear classifier represented by the estimated parameters in \code{object}
 }
 \seealso{\code{\link{glc}}, \code{\link{logLik.glcStruct}}
 }

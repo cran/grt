@@ -11,7 +11,7 @@ gqcStruct(pnoise, cnoise, coeffs, bias)
 \item{pnoise}{a positive non-zero numeric.}
 \item{cnoise}{a positive non-zero numeric.}
 \item{coeffs}{a vector. The \code{length(coeffs)} should be equal to \code{sum(1:(dim+1)) - 1} where \code{dim} is the number of the model's dimension}
-\item{bias}{numetic.}
+\item{bias}{numeric.}
 }
 \value{
 object of class \code{gqcStruct}, i.e., a named list containing \code{pnoise}, \code{cnoise}, \code{coeffs}, and \code{bias}.

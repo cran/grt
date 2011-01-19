@@ -19,14 +19,14 @@ The function assumes that there are two categories (e.g, \sQuote{A} and \sQuote{
 
 
 Fixed Random Guessing model assumes that participant responded randomly without response bias; for each stimulus, probability of responding \sQuote{A} and
-\sQuote{B} is .5. There is no free parameters in this model (i.e., df = 0).
+\sQuote{B} is .5. There are no free parameters in this model (i.e., df = 0).
 
 
-General Random Guessing model assumes that partiicpants responded randomly but is biased toward one response. The model estimates the response bias (df = 1).
+General Random Guessing model assumes that participants responded randomly but is biased toward one response. The model estimates the response bias (df = 1).
 }
 
 \value{
-a list object containing:
+object of class \code{grg}, which is a list object containing:
 \item{par}{the fixed or estimated response bias}
 \item{logLik}{the log-likelihood of the model}
 \item{AIC}{Akaike's An Information Criterion for the fitted model}
@@ -37,7 +37,8 @@ a list object containing:
 }
 \seealso{
   \code{\link{glc}},
-  \code{\link{gqc}}
+  \code{\link{gqc}},
+  \code{\link{extractAIC.grg}}
 }
 \examples{
 data(subjdemo_2d)

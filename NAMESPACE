@@ -6,7 +6,6 @@ import(MASS)
 importFrom(rgl, open3d, points3d, plot3d, quads3d)
 importFrom(misc3d, contour3d)
 exportPattern("^[^\\.]")
-S3method(scale, gqc)
 S3method(coef, glc)
 S3method(coef, glcStruct)
 S3method(extractAIC, glc)
@@ -24,7 +23,7 @@ S3method(plot3d, gqc)
 S3method(predict, glc)
 S3method(print, glc)
 S3method(print, gqc)
-S3mothod(scale, glc)
-
+S3method(scale, glc)
+S3method(scale, gqc)
 
 

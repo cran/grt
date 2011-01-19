@@ -9,7 +9,7 @@
 }
 \arguments{
 \item{object}{object of class \code{glc}.}
-\item{newdata}{a vector or a matrix contraining new samples with which the classification prediction is to be made.}
+\item{newdata}{a vector or a matrix containing new samples with which the classification prediction is to be made.}
 \item{seed}{numeric. The \sQuote{seed} used for the random number generator.}
 \item{\dots}{further arguments (currently unused).}
 }

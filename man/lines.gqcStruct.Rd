@@ -14,7 +14,7 @@
 \item{x}{object of class \code{gqcStruct}}
 \item{xlim}{the x limits of the plot. Default to \code{c(0,1)}}
 \item{ylim}{the y limits of the plot. Default to \code{c(0,1)}}
-\item{npoints}{numeric. number of points per dimention used to plot the decision bound. Default is 100.}
+\item{npoints}{numeric. number of points per dimension used to plot the decision bound. Default is 100.}
 \item{col}{the color to be used for the line}
 \item{\dots}{further arguments.}
 

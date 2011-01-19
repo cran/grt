@@ -2,7 +2,7 @@
 \name{unscale}
 \alias{unscale}
 \title{Un-scale or re-center the scaled or centered Matrix-like object}
-\description{This function revert a Matrix-like object that is scaled or centered via \code{scale.default} to data with the origincal scale/center.
+\description{This function revert a Matrix-like object that is scaled or centered via \code{scale.default} to data with the original scale/center.
 }
 \usage{
 unscale(x)
@@ -11,7 +11,7 @@ unscale(x)
 \item{x}{numeric matrix(like object).}
 }
 \value{
-a matrix that are re-centered or un-scaled, based on the value of attributes "scaled:center" and "scaled:scale" of \code{x}. If neither of those attributes are specified, \code{x} is returned.
+a matrix that are re-centered or un-scaled, based on the value of attributes "scaled:center" and "scaled:scale" of \code{x}. If neither of those attributes is specified, \code{x} is returned.
 }
 \seealso{\code{\link{scale}}}
 \examples{

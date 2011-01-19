@@ -14,11 +14,11 @@
 \item{fitdb}{logical. If \code{TRUE}, the fitted decision bound will be plotted. Default to \code{TRUE}}
 \item{initdb}{logical. If \code{TRUE}, the decision bound specified by the initial parameters will be plotted. Default to \code{FALSE}}
 \item{lims}{column matrix of the x, y, and z limits of the plot}
-\item{alpha}{alpha value for the descision bound surface(s) ranging form 0 (fully transparent) to 1 (opaque). Default is .5.}
+\item{alpha}{alpha value for the decision bound surface(s) ranging from 0 (fully transparent) to 1 (opaque). Default is .5.}
 \item{\dots}{further arguments.}
 }
 \details{
-This function produces a 3D scatter plot of data matrix in the \code{x} and (optionally) descision boundary specified within (i.e., \code{x$par} and/or \code{x$initpar}), using \code{points3d} and \code{quads3d} in the \code{rgl} package respectively.
+This function produces a 3D scatter plot of data matrix in the \code{x} and (optionally) decision boundary specified within (i.e., \code{x$par} and/or \code{x$initpar}), using \code{points3d} and \code{quads3d} in the \code{rgl} package respectively.
 }
 \references{
 Daniel Adler, Oleg Nenadic and Walter Zucchini (2003) RGL: A R-library for 3D visualization with OpenGL

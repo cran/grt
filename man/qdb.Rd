@@ -9,7 +9,7 @@ qdb(means, covs, pnoise = 10, cnoise = 100, sphere = FALSE)
 }
 \arguments{
 \item{means}{a list of vectors containing means of the two distributions.}
-\item{covs}{a list contraining the covariance matrices of the two distributions.}
+\item{covs}{a list containing the covariance matrices of the two distributions.}
 \item{pnoise, cnoise}{numeric. Defaults set to 10, and 100, respectively. see \sQuote{Details}
 }
 \item{sphere}{logical. If TRUE, the returned decison bound forms a circle or sphere.}

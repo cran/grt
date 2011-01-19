@@ -1,4 +1,5 @@
 scale <- function(x, ...) UseMethod("scale")
+
 scale.glc  <- function(x, initdb = FALSE, zlimit = Inf, ...)
 {
     if (!inherits(x, "glc")) stop("object not of class \"glc\"")

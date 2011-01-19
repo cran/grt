@@ -20,7 +20,7 @@ grtrnorm(n,
 \item{np}{the number of populations to be sampled from}
 \item{means}{a list of vectors specifying the means of the variable for each populations}
 \item{covs}{a matrix or a list of matrices specifying the covariance matrices of the variables. Each matrix should be positive-definite and symmetric.}
-\item{clip.sd}{an integer speficying the cutoff value of standard score. The standard score of a generated sample exceeding this value should be truncated. Default to \code{Inf} (no truncation).}
+\item{clip.sd}{an integer specifying the cutoff value of standard score. The standard score of a generated sample exceeding this value should be truncated. Default to \code{Inf} (no truncation).}
 \item{tol}{tolerance (relative to largest variance) for numerical lack of positive-definiteness in \code{covs}.}
 \item{empirical}{logical. If true, \code{means} and \code{covs} specify the empirical rather than population means and covariance matrices.}
 \item{seed}{an integer internally supplied as \code{seed} argument to the function \code{\link{set.seed}}. If \code{NULL}, \code{.Random.seed} is used.}

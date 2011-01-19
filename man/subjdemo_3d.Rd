@@ -14,13 +14,13 @@ subjdemo_3d
   This data frame contains 500 rows and the following columns:
   \describe{
     \item{\code{category}}{
-      label of the category to which each stimuli belongs.
+      label of the category to which each stimulus belongs.
     }
     \item{\code{x}}{value on the dimension 'x'}
     \item{\code{y}}{value on the dimension 'y'}
     \item{\code{z}}{value on the dimension 'z'}
     \item{\code{response}}{
-      classification reponse of a participant.
+      classification response of a participant.
     }
   }
 }
