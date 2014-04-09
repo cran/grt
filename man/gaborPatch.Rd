@@ -29,7 +29,7 @@ gaborPatch(sf,
   \item{grating}{type of grating to be used. Default to \sQuote{cosine}.}
   \item{npoints}{number of points per line used to draw the patch.}
   \item{trim}{Gaussian values smaller than the specified value should be trimmed.}
-  \item{trim.col}{gray level of the trimmed part of the image, between 0 (\sQuote{black}) and 1 (\sQuote{white}). Default to .5 (\sQuote{gray})}
+  \item{trim.col}{gray level of the trimmed part of the image, between 0 (\sQuote{black}) and 1 (\sQuote{white}). Default to .5 (\sQuote{gray}) Setting it to any other value or \code{NA} makes the trimmed part transparent.}
   \item{\dots}{additional parameters for \code{\link{image}} may be passed as arguments to this function.}
 }
 \details{

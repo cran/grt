@@ -42,27 +42,15 @@ glc <- function(formula,
         fixidx <- unlist(fixed[c("noise","coeffs","bias")])
         new_par <- glcStruct(noise=par$noise, coeffs=par$coeffs, bias=par$bias)
         lim <- extendrange(range(-par$coeffs*x))
-        if(missing(lower)){
-            lower <- c(.001, 0, lim[1])
-            lower <- lower[!fixidx]
-        }
-        if(missing(upper)){
-            upper <- c(500, 0, lim[2])
-            upper <- upper[!fixidx]
-        }
+        if(missing(lower)) lower <- c(.001, 0, lim[1])[!fixidx]
+        if(missing(upper)) upper <- c(500, 0, lim[2])[!fixidx]
     } else {
         fixed$angle <- fixed$coeffs
         fixidx <- unlist(fixed[c("noise","angle","bias")])
         # Convert to search format: list(noise, angle, bias)
         new_par <- old2new_par(par)
-        if(missing(lower)){
-            lower <- c(.001, -Inf, -Inf)
-            lower <- lower[!fixidx]
-        }
-        if(missing(upper)){
-            upper <- c(500, Inf, Inf)
-            upper <- upper[!fixidx]
-        }
+        if(missing(lower)) lower <- c(.001, -Inf, -Inf)[!fixidx]
+        if(missing(upper)) upper <- c(500, Inf, Inf)[!fixidx]
     }
     if(all(fixidx)) stop("no free parameters to fit.")
     initpar <- unlist(new_par[!fixidx])
@@ -115,6 +103,7 @@ glc <- function(formula,
         fit$par <- new2old_par(relist(params, skeleton=new_par))
     }
     fit$logLik <- -optRes$value
+    #fit$RMSE <- RMSE.glcStruct(object = fit$par, response=response, x=x, zlimit=zlimit)
     attr(fit$logLik, "df") <- length(optRes$par)
     class(fit$logLik) <- "logLik"
     class(fit) <- "glc"
@@ -260,3 +249,29 @@ extractAIC.glc <- function(fit, scale, k = 2, ...)
     c(edf, -2 * loglik + k * edf)
 }
 
+# RMSE.glcStruct <- 
+#     function(object,
+#         response, 
+#         x, 
+#         zlimit = Inf, ...)
+# {
+#     dimen <- ncol(as.matrix(x))
+#     x <- as.matrix(cbind(x,1))
+#     if(nrow(x) != length(response)) 
+#         stop("nrow(x) and length(response) are different")
+#     g <- as.factor(response)
+#     lev <- levels(g)
+#     
+#     if(is.null(object$angle)) a <- object$coeffs
+#     else a <- angle2cart(object$angle)
+#     z_coefs <- c(a, object$bias) / object$noise
+#     z <- x %*% as.matrix(z_coefs)
+#     # Truncate the large z-scores
+#     z[z < -zlimit] <- -zlimit
+#     z[z > zlimit] <- zlimit
+#     resp <- rep(0, length.out=nrow(x))
+#     resp[g==lev[1]] <- 1
+#     #calculate p(A|item)
+#     prob <- pnorm(z, lower.tail=FALSE)
+#     sqrt(mean((resp - prob)^2))
+# }

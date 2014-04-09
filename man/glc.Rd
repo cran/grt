@@ -14,7 +14,7 @@ glc(formula, data, category, par = list(), zlimit = Inf,
 \arguments{
 \item{formula}{
 A formula of the form \code{response ~ x1 + x2 + \dots}, where the 
-response specifies the grouping factor (generally a participant's response) and the right hand side specifies the variables of the classified stimuli.
+response specifies the grouping factor (generally a participant's response) and the right hand side specifies the relevant dimensions or features of the stimuli.
 }
 \item{data}{
 A data frame from which variables specified in \code{formula} are taken.

@@ -2,14 +2,17 @@
 \name{coef.glc}
 \alias{coef.glc}
 \alias{coef.glcStruct}
-\title{Extract glc coefficients}
+\alias{coef.gcjc}
+\title{Extract 'glc' or 'gcjc' coefficients}
 \description{
-Extracts the coefficients from the model object \code{glc} or \code{glcStruct}.
+Extracts the coefficients from the model object \code{glc}, \code{glcStruct}, or \code{gcjc}.
 }
 \usage{
 \method{coef}{glc}(object, \dots)
 
 \method{coef}{glcStruct}(object, \dots)
+
+\method{coef}{gcjc}(object, \dots)
 }
 \arguments{
 \item{object}{object of class \code{glc} or \code{glcStruct}}
@@ -22,6 +25,8 @@ Both the object \code{glc} and \code{glcStruct} contain the parameters for the d
 }{a1x1 + a2x2 \dots anxn + b = 0}
 
 This function transforms and returns the coefficients of the function solved with respect the \eqn{x_n}{xn}.
+
+For the object \code{gcjc}, a list of two coefficients (Intercepts) are returned.
 }
 \examples{
 data(subjdemo_2d)

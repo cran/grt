@@ -7,6 +7,7 @@ ldb <-
     covstruct <- match.arg(covstruct)
     if(!is.list(means)) stop("means is not a list")
     else M <- means
+    if(length(M)==1) M[[2L]] <- M[[1L]]
     if(is.list(covs)) covs <- as.matrix(covs[[1L]])
     if(covstruct == "scaledIdentity")
 	covs <- diag(mean(diag(covs)), nrow=dim(covs)[1L], ncol=dim(covs)[2L])
@@ -17,7 +18,8 @@ ldb <-
     
     if(qr(covs)$rank != max(dim(covs)))
 	stop("Covariance matrix not full rank.")
-    b <- (M[[2L]] - M[[1L]]) %*% qr.solve(covs)
+    offset <- ifelse( M[[2L]] == M[[1L]], .Machine$double.eps, 0)
+    b <- ((M[[2L]] - M[[1L]]) + offset) %*% qr.solve(covs)
     enorm <- sqrt(sum(b^2))
     res <- NULL
     res$noise <- noise
@@ -31,6 +33,7 @@ ldb.p.correct <- function(means, covs, noise = 0)
 {
     if(!is.list(means)) stop("means is not a list")
     else M <- means
+    if(length(M)==1) M[[2L]] <- M[[1L]]
     if(is.list(covs) && length(covs) > 1)
         K <- as.matrix(Reduce("+", covs)/length(covs))
     else K <- as.matrix(covs)

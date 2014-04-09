@@ -3,15 +3,20 @@
 \alias{extractAIC.glc}
 \alias{extractAIC.gqc}
 \alias{extractAIC.grg}
-\title{extractAIC method for class 'glc', 'gqc', and 'grg'}
-\description{Extract Akaike's An Information Criteria from a General Linear or Quadratic Classifier, or a General Random Guessing model}
+\alias{extractAIC.gcjc}
+\title{extractAIC method for class 'glc', 'gqc', 'gcjc', and 'grg'}
+\description{Extract Akaike's An Information Criteria from a General Linear, Quadratic, or Conjunctive Classifier, or a General Random Guessing model}
 \usage{
 \method{extractAIC}{glc}(fit, scale, k = 2, \dots)
 
 \method{extractAIC}{gqc}(fit, scale, k = 2, \dots)
+
+\method{extractAIC}{gcjc}(fit, scale, k = 2, \dots)
+
+\method{extractAIC}{grg}(fit, scale, k = 2, \dots)
 }
 \arguments{
-  \item{fit}{object of class \code{glc}, \code{gqc}, or \code{grg}}
+  \item{fit}{object of class \code{glc}, \code{gqc}, \code{gcjc}, or \code{grg}}
   \item{scale}{unused argument}
  \item{k}{numeric specifying the penalty per parameter to be used in calculating AIC. Default to 2.}
  \item{\dots}{further arguments (currently not used).}

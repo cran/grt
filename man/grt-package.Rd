@@ -12,21 +12,17 @@ Functions to generate and analyze data for psychology experiments based on the G
 \tabular{ll}{
 Package: \tab grt\cr
 Type: \tab Package\cr
-Version: \tab 0.1-2\cr
-Date: \tab 2011-01-19\cr
+Version: \tab 0.2\cr
+Date: \tab 2014-04-09\cr
 License: \tab GPL(>=2)\cr
 LazyLoad: \tab yes\cr
 }
 This package is written based mostly on the GRT Toolbox for MATLAB by Alfonso-Reese (2006), although many functions have been renamed and modified from the original in order to make them more general and \dQuote{R-like.}
 
-The functions \code{\link{grtrnorm}} and \code{\link{grtMeans}} are used for design categorization experiments and generating stimuli. The functions \code{\link{glc}}, \code{\link{gqc}}, and \code{\link{grg}} are used for fitting the general linear classifier, the general quadratic classifier, and the general random guessing model, respectively. The \code{\link{glc}} and \code{\link{gqc}} have plot methods (\code{\link{plot.glc}}, \code{\link{plot.gqc}}, \code{\link{plot3d.glc}}, \code{\link{plot3d.gqc}}).
+The functions \code{\link{grtrnorm}} and \code{\link{grtMeans}} are used for design categorization experiments and generating stimuli. The functions \code{\link{glc}}, \code{\link{gcjc}}, \code{\link{gqc}}, and \code{\link{grg}} are used for fitting the general linear classifier, the general conjunctive classifier, the general quadratic classifier, and the general random guessing model, respectively. The \code{\link{glc}}, \code{\link{gcjc}}, and \code{\link{gqc}} have plot methods (\code{\link{plot.glc}}, \code{\link{plot.gcjc}}, \code{\link{plot.gqc}}, \code{\link{plot3d.glc}}, \code{\link{plot3d.gqc}}).
 }
 \author{
-The original Matlab toolbox by Leola A. Alfonso-Reese. 
-
-R port, with several significant modifications by Kazunaga Matsuki.
-
-Maintainer: Kazunaga Matsuki <kmatsuki@uwo.ca>
+Kazunaga Matsuki
 }
 \references{
   Alfonso-Reese, L. A. (2006)

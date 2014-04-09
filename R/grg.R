@@ -12,6 +12,7 @@ grg <- function(response, fixed = FALSE, k = 2)
         m <- max(n)
         fit$par <- p <- m/N
         fit$logLik <- m*log(p) + (N-m)*log(1-p)
+        if(p==1) fit$logLik <- m*log(p)
         attr(fit$logLik, "df") <- 1
     }
     class(fit$logLik) <- "logLik"
